@@ -36,6 +36,7 @@ export class InicioComponent implements OnInit {
     }
     this.findAllTemas();
     this.getAllPostagens();
+    this.auth.refreshToken();
   }
   findAllTemas(){
     this.temaservice.getAllTemas().subscribe((resp:Tema[])=>{
